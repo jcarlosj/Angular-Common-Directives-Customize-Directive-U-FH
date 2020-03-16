@@ -8,7 +8,7 @@
         <span class="title">Angular!</span>
     </a>
 </nav>
-<div class="container theme-light">
+<div class="container" [ngClass]="{ 'theme-light' : isLightColorTheme }">
     <div class="section">
         <!-- <app-ng-style></app-ng-style> -->
         <app-component-styles class="active"></app-component-styles>
