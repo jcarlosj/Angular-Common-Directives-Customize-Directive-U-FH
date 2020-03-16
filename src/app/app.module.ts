@@ -6,10 +6,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAngular } from '@fortawesome/free-brands-svg-icons';
 
 import { AppComponent } from './app.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,
