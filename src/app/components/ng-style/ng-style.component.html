@@ -1,1 +1,51 @@
-<p>ng-style works!</p>
+<h3>style <small>Directive</small></h3>
+
+<!-- Forma 1: Usando propiedades CSS (Sintaxis Alternativa) -->
+<p [style.fontSize]="'1.2rem'">
+    "Hazlo todo tan simple como sea posible, pero no más simple"
+    <span 
+        [style.fontWeight]="'bold'" 
+        [style.color]="'red'"
+        [style.fontSize.rem]="1"
+    >-- Albert Einstein</span>
+</p>
+
+<h5 [style.fontSize.px]="increasesSize">Mirame!</h5>
+<div [style.padding.rem]="1.1">
+    <button 
+        class="btn btn-primary"
+        (click)="increasesSize = increasesSize + 1;"
+    >
+        <fa-icon 
+            [icon]="['fas', 'plus']"
+        ></fa-icon> 
+    </button>
+    <button 
+        class="btn btn-primary"
+        (click)="increasesSize = increasesSize - 1"
+    >
+        <fa-icon 
+            [icon]="['fas', 'minus']"
+        ></fa-icon> 
+    </button>
+</div>
+
+<h3>ngStyle <small>Directive</small></h3>
+
+<!-- Forma 2: Usando expresión pares clave-valor -->
+<p [ngStyle]="{ 'font-size': '1.2rem' }">
+    "Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo"
+   <span [ngStyle]="{ 'font-weight': 'bold', 'color': 'blue' }">-- Benjamín Franklin</span>
+</p>
+
+<!-- Forma 3: Usando expresiones -->
+<p [ngStyle]="{ 'font-size.rem': fontSizePhrase }">
+    "La mejor forma de predecir el futuro es implementarlo"
+   <span [ngStyle]="{ 'font-weight': fontWeightAuthor, 'font-size.rem': fontSizeAuthor }">-- David Heinemeier Hansson</span>
+</p>
+
+<!-- Forma 4: Usando expresión que devuelve pares clave-valor -->
+<p [ngStyle]="stylePhrase">
+    "No documentes el problema; arréglalo"
+   <span [ngStyle]="styleAuthor">-- Atli Björgvin Oddsson</span>
+</p>
