@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    margin: 1rem;
+}
+.section {
+    margin: 1rem 2rem;
+}
+.navbar {
+    align-items: center;
+    display: flex;
+}
+.navbar-brand.brand-logo {
+    margin: 0 auto;
+}
+.title {
+    font-size: 1.8rem;
+    padding-left: .4rem;
+}
