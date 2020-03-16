@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'components-directives';
-  isLightColorTheme = true;
+  isLightColorTheme = false;
+
+  changeColorTheme() {
+    this .isLightColorTheme = ! this .isLightColorTheme;
+  }
+
 }
