@@ -21,6 +21,19 @@ import { Component, OnInit } from '@angular/core';
         font-weight: bold;
         padding: .5rem 1rem;
       }
+      /** selector de pseudo-clase :host 
+       * Afecta estilos en el elemento que aloja el componente */
+      :host {
+        border: 1px dotted green;
+        display: block;
+        padding: 1rem;
+      }
+      :host(.active) {
+        background-color: lightgoldenrodyellow;
+      }
+      :host(.active) button {
+        background-color: red;
+      }
     `
   ]
 })
