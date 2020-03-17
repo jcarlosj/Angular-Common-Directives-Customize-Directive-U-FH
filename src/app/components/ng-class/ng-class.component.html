@@ -112,5 +112,36 @@
     >Dale este color</button>
 </section>
 
+<h3>Ejemplo de Asincronía</h3>
+<section class="m-4">
+    <button
+        type="button"
+        class="btn btn-primary m-1"
+        (click)="execute()"
+        [disabled]="loading"
+    >
+        <fa-icon 
+            [icon]="!loading ? ['fas', 'save'] : ['fas', 'spinner']"
+            [spin]="loading"
+        ></fa-icon> 
+        Guardar Cambios
+    </button>
+    <button
+        type="button"
+        class="btn btn-primary  m-1"
+        (click)="execute()"
+        [disabled]="loading"
+    >
+        <fa-icon 
+            [icon]="['fas', !loading ? 'save' : 'spinner' ]"
+            [pulse]="loading"
+        ></fa-icon> 
+        <span *ngIf="!loading"> Guardar</span>
+        <span *ngIf="loading"> Espere ...</span>
+    </button>
+</section>
+
+
+
 
 

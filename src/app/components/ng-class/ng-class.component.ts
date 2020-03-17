@@ -27,10 +27,23 @@ export class NgClassComponent implements OnInit {
     isAuthorized: false
   }
 
+  loading: boolean = false;
 
-  constructor() { }
+  constructor() { 
+    console .log( 'Loading!', this .loading );
+  }
 
   ngOnInit() {
+  }
+
+  execute() {
+    this .loading = true;
+    console .log( 'Loading!', this .loading );
+
+    setTimeout( () => {
+      this .loading = false;
+      console .log( 'Loading!', this .loading );
+    }, 3000 );
   }
 
 }
