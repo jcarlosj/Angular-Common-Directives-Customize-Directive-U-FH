@@ -1,4 +1,12 @@
-# ComponentsDirectives
+# Directives
+
+Ejemplos generales sobre las directivas más usadas en Angular, así como la personalización de los mismos.
+
+ - class
+ - ngClass
+ - ngStyle
+ - Customize Directive
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
 
