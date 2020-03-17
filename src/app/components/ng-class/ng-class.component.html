@@ -1,1 +1,116 @@
-<p>ng-class works!</p>
+<h3>ngClass <small>Directive</small></h3>
+
+<!-- Asignando una clase a través de una variable -->
+<div [ngClass]="classAlert" class="alert" role="alert">
+  A simple alert—check it out!
+</div>
+<section class="m-4">
+    <p>Dale click a los botones</p>
+    <button 
+        type="button"
+        class="btn btn-primary m-1"
+        (click)="classAlert = 'alert-primary'"
+    >primary</button>
+    <button 
+        type="button"
+        class="btn btn-secondary m-1"
+        (click)="classAlert = 'alert-secondary'"
+    >secondary</button>
+    <button 
+        type="button"
+        class="btn btn-success m-1"
+        (click)="classAlert = 'alert-success'"
+    >success</button>
+    <button 
+        type="button"
+        class="btn btn-danger m-1"
+        (click)="classAlert = 'alert-danger'"
+    >danger</button>
+    <button 
+        type="button"
+        class="btn btn-warning m-1"
+        (click)="classAlert = 'alert-warning'"
+    >warning</button>
+    <button 
+        type="button"
+        class="btn btn-info m-1"
+        (click)="classAlert = 'alert-info'"
+    >info</button>
+    <button 
+        type="button"
+        class="btn btn-light m-1"
+        (click)="classAlert = 'alert-light'"
+    >light</button>
+    <button 
+        type="button"
+        class="btn btn-dark m-1"
+        (click)="classAlert = 'alert-dark'"
+    >dark</button>
+</section>
+
+<h3>Algunos ejemplos</h3>
+<section class="m-4">
+
+    <h4>Usando Strings</h4>     <!-- Condicionando Clases usando Strings -->
+    <div class="mt-4 mb-4">
+        <!-- Condicionando una o mas clases usando un string explicito -->
+        <p [ngClass]="'p-3 mb-2 bg-warning text-dark'">"Cualquier sueño que merezca ser vivido es un sueño por el que merece la pena luchar". (Profesor X)</p>
+    </div>
+    <div class="mt-4 mb-4">
+        <!-- Condicionando clases usando el retorno de una variable -->
+        <p [ngClass]="'phrase'">"En mi opinión, la existencia de la vida es un fenómeno altamente sobrevalorado". (Doctor Manhattan)</p>
+    </div>
+
+    <h4>Usando Arrays</h4>      <!-- Condicionando Clases usando Array Explicito -->
+    <div [ngClass]="[ 'mt-4', 'mb-4' ]">
+        <!-- Condicionando una clase -->
+        <p [ngClass]="[ 'text-danger', 'text-right' ]">"A veces un hombre puede lograr demasiado con tan solo proponérselo". (Black Panther)</p>
+    </div>
+
+    <h4>Usando Objetos</h4>     <!-- Condicionando Clases usando Objeto Explicito -->
+    <div class="mt-4 mb-4">
+        <!-- Condicionando una clase -->
+        <p [ngClass]="{ 'phrase': true }">"Seria una vida terriblemente aburrida si nunca pasara algo extraño. Los raros son los que cambian el mundo". (Doctor Strange)</p>
+    </div>
+    <div class="mt-4 mb-4">
+        <!-- Condicionando clases separadas -->
+        <p [ngClass]="{ 'text-center': false, 'border-bottom': true, 'border-warning': true }">"Cualquier sueño que merezca ser vivido es un sueño por el que merece la pena luchar". (Profesor X)</p>
+    </div>
+    <div class="mt-4 mb-4">
+        <!-- Condicionando clases agrupadas -->
+        <p [ngClass]="{ 'text-center phrase text-uppercase': true }">"Planeamos días y días y cuando llega el momento, procedemos a improvisar". (Quicksilver)</p>
+    </div>
+    <div class="mt-4 mb-4">
+        <!-- Condicionando clases usando el retorno un objeto -->
+        <p [ngClass]="classProperties">"Un gran poder conlleva una gran responsabilidad". (Ben Parker)</p>
+    </div>
+    <div class="mt-4 mb-4">
+        <!-- Condicionando clases usando el retorno de propieades de objeto -->
+        <p [ngClass]="{ 
+            'text-uppercase': ! conditionalClasses.uppercase,
+            'p-3 mb-2 bg-dark text-white': conditionalClasses. background,
+            'text-center': conditionalClasses. center
+        }">"A veces sólo tienes que reducir la velocidad para ver a dónde quieres ir". (Flash)</p>
+    </div>
+
+</section>
+
+<h3>Ejemplo interactivo</h3>
+<section class="m-4">
+    <p [ngClass]="{
+        'text-info': prop.isAuthorized,
+        'text-danger': !prop.isAuthorized
+    }">Recuerda, tu enemigo nunca jugará limpio. (Linterna verde)</p>
+    <button
+        type="button"
+        class="btn"
+        [ngClass]="{
+            'btn-info': !prop.isAuthorized,
+            'btn-danger': prop.isAuthorized
+        }"
+        (click)="prop.isAuthorized = !prop.isAuthorized"
+    >Dale este color</button>
+</section>
+
+
+
