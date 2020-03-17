@@ -17,7 +17,7 @@
         <!-- <app-component-styles class="active"></app-component-styles> -->
         
         <h3>App Component<small></small></h3>
-        <p appHighlightedText>Haciendo click al boton cambiaras los estilos del componente hijo!</p>
+        <p [appHighlightedText]="'pink'">Haciendo click al boton cambiaras los estilos del componente hijo!</p>
         <button class="btn btn-primary" (click)="changeColorTheme()">Cambia estilo</button>
     </div>
 </div>
