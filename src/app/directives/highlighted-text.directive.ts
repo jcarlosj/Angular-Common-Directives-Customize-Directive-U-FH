@@ -1,10 +1,14 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appHighlightedText]'
 })
 export class HighlightedTextDirective {
 
-  constructor() { }
+  constructor( private elParagraph : ElementRef ) { 
+    console .log( 'Directiva appHighlightedText disponible!' );
+
+    elParagraph .nativeElement .style .backgroundColor = 'yellow';
+  }
 
 }
