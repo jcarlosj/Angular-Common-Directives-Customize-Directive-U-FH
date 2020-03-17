@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ComponentStylesComponent } from './components/component-styles/component-styles.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { HighlightedTextDirective } from './directives/highlighted-text.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
     ComponentStylesComponent,
-    NgClassComponent
+    NgClassComponent,
+    HighlightedTextDirective
   ],
   imports: [
     BrowserModule,
