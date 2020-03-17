@@ -8,12 +8,14 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { AppComponent } from './app.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ComponentStylesComponent } from './components/component-styles/component-styles.component';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
-    ComponentStylesComponent
+    ComponentStylesComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
